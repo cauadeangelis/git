@@ -1,0 +1,913 @@
+/* =========================================================
+   RESET PADRÃO
+   ========================================================= */
+
+/*
+  * significa "TODOS OS ELEMENTOS" do HTML.
+
+  Ou seja:
+  h1, p, div, img, nav, header, footer etc.
+
+  Aqui estamos removendo margens e espaçamentos automáticos
+  que o navegador coloca.
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   HTML
+   ========================================================= */
+
+/*
+  html representa o documento inteiro.
+
+  height: 100% permite que ele ocupe toda a altura da tela.
+*/
+html {
+  height: 100%;
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+/*
+  body representa tudo que aparece dentro da página.
+
+  Portanto essas configurações funcionam como um padrão
+  geral para o site inteiro.
+*/
+body {
+  min-height: 100%;
+
+  /* Cor de fundo da página */
+  background-color: rgb(136, 132, 132);
+
+  /* Cor padrão dos textos */
+  color: rgb(11, 0, 0);
+
+  /* Fonte padrão do site */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Espaçamento interno */
+  padding: 10px;
+
+  /* Espaçamento entre linhas de texto */
+  line-height: 1.5;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+/*
+  header afeta TODO <header> que existir no HTML.
+
+  Normalmente o header é usado para:
+  - título
+  - logo
+  - menu
+  - navegação
+*/
+header {
+  min-height: 10vh;
+
+  background-color: rgb(255, 253, 253);
+
+  padding: 15px;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+/*
+  main afeta o <main>.
+
+  O main normalmente contém o conteúdo principal da página.
+*/
+main {
+  min-height: 80vh;
+
+  background-color: rgb(110, 107, 107);
+
+  padding: 20px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+/*
+  footer afeta TODO <footer>.
+
+  Normalmente usado para:
+  - copyright
+  - redes sociais
+  - contato
+  - links
+*/
+footer {
+  min-height: 10vh;
+
+  background-color: rgb(255, 253, 253);
+
+  padding: 15px;
+}
+
+/* =========================================================
+   H1
+   ========================================================= */
+
+/*
+  h1 afeta TODOS os:
+
+  <h1>...</h1>
+
+  Normalmente o h1 é o título PRINCIPAL da página.
+*/
+h1 {
+  font-size: 32px;
+
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================================
+   H2
+   ========================================================= */
+
+/*
+  h2 afeta TODOS os:
+
+  <h2>...</h2>
+
+  Normalmente usado como título de uma seção.
+*/
+h2 {
+  font-size: 26px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   H3
+   ========================================================= */
+
+/*
+  h3 afeta TODOS os:
+
+  <h3>...</h3>
+
+  Normalmente usado como subtítulo dentro de uma seção.
+*/
+h3 {
+  font-size: 21px;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   PARÁGRAFOS
+   ========================================================= */
+
+/*
+  p afeta TODOS os parágrafos:
+
+  <p>Meu texto</p>
+*/
+p {
+  font-size: 16px;
+
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+/*
+  a afeta TODOS os links:
+
+  <a href="...">Clique aqui</a>
+*/
+a {
+  color: blue;
+
+  /* Remove a linha embaixo do link */
+  text-decoration: none;
+}
+
+/*
+  :hover funciona quando o mouse fica em cima do elemento.
+
+  Nesse caso funciona em TODOS os links.
+*/
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LISTAS
+   ========================================================= */
+
+/*
+  ul afeta TODAS as listas não ordenadas.
+
+  Exemplo:
+
+  <ul>
+    <li>Item</li>
+  </ul>
+*/
+ul {
+  list-style: none;
+}
+
+/*
+  li afeta TODOS os itens de lista.
+
+  Exemplo:
+
+  <li>Início</li>
+*/
+li {
+  margin: 5px;
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+
+/*
+  nav representa uma área de navegação.
+
+  Exemplo:
+
+  <nav>
+    ...
+  </nav>
+*/
+nav {
+  padding: 10px;
+}
+
+/*
+  nav ul significa:
+
+  "Pegue somente as <ul> que estiverem dentro de um <nav>."
+
+  Não afeta todas as listas do site.
+*/
+nav ul {
+  display: flex;
+
+  gap: 30px;
+
+  align-items: center;
+}
+
+/*
+  nav a significa:
+
+  "Pegue somente os links <a> que estiverem dentro de nav."
+*/
+nav a {
+  color: black;
+
+  font-weight: bold;
+}
+
+/*
+  Quando passar o mouse em um link que estiver dentro do nav.
+*/
+nav a:hover {
+  color: gray;
+}
+
+/* =========================================================
+   HEADER + LISTA
+   ========================================================= */
+
+/*
+  header ul significa:
+
+  Afeta somente listas <ul> que estejam dentro do <header>.
+
+  Exemplo:
+
+  <header>
+    <nav>
+      <ul>
+        ...
+      </ul>
+    </nav>
+  </header>
+*/
+header ul {
+  display: flex;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
+
+/*
+  img afeta TODAS as imagens:
+
+  <img src="imagem.jpg" alt="Imagem">
+*/
+img {
+  /* Evita que a imagem ultrapasse o tamanho disponível */
+  max-width: 100%;
+
+  /* Mantém a proporção original */
+  height: auto;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+/*
+  button afeta TODOS os:
+
+  <button>Enviar</button>
+*/
+button {
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/*
+  button:hover funciona quando o mouse fica em cima
+  de qualquer botão.
+*/
+button:hover {
+  opacity: 0.8;
+}
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+/*
+  input afeta TODOS os campos:
+
+  <input type="text">
+  <input type="email">
+  <input type="password">
+*/
+input {
+  padding: 10px;
+
+  border: 1px solid gray;
+
+  border-radius: 5px;
+}
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+/*
+  textarea afeta caixas de texto maiores.
+
+  Exemplo:
+
+  <textarea></textarea>
+*/
+textarea {
+  padding: 10px;
+
+  border: 1px solid gray;
+
+  border-radius: 5px;
+}
+
+/* =========================================================
+   CLASSE .DESTAQUE
+   ========================================================= */
+
+/*
+  Quando começa com "." significa CLASS.
+
+  .destaque SÓ funciona quando você colocar:
+
+  class="destaque"
+
+  Exemplo:
+
+  <span class="destaque">CS2</span>
+
+  ou:
+
+  <p class="destaque">Texto</p>
+
+  ou:
+
+  <h2 class="destaque">Título</h2>
+*/
+.destaque {
+  color: red;
+
+  font-weight: bold;
+}
+
+/* =========================================================
+   CLASSE .TEXTO
+   ========================================================= */
+
+/*
+  .texto funciona somente em elementos que tenham:
+
+  class="texto"
+
+  Exemplo:
+
+  <p class="texto">
+    Meu texto
+  </p>
+*/
+.texto {
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CLASSE .CENTRALIZADO
+   ========================================================= */
+
+/*
+  Funciona somente quando usar:
+
+  class="centralizado"
+
+  Exemplo:
+
+  <h1 class="centralizado">
+    Meu site
+  </h1>
+*/
+.centralizado {
+  text-align: center;
+}
+
+/* =========================================================
+   CLASSE .NEGRITO
+   ========================================================= */
+
+/*
+  Deixa qualquer elemento em negrito.
+
+  Exemplo:
+
+  <span class="negrito">
+    Texto importante
+  </span>
+*/
+.negrito {
+  font-weight: bold;
+}
+
+/* =========================================================
+   CLASSE .ITALICO
+   ========================================================= */
+
+/*
+  Deixa o texto em itálico.
+
+  Exemplo:
+
+  <p class="italico">
+    Meu texto
+  </p>
+*/
+.italico {
+  font-style: italic;
+}
+
+/* =========================================================
+   CLASSE .SUBLINHADO
+   ========================================================= */
+
+/*
+  Coloca linha embaixo do texto.
+
+  Exemplo:
+
+  <span class="sublinhado">
+    Texto
+  </span>
+*/
+.sublinhado {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   CLASSE .CONTAINER
+   ========================================================= */
+
+/*
+  .container é muito usada para limitar a largura
+  do conteúdo da página.
+
+  Exemplo:
+
+  <main class="container">
+    ...
+  </main>
+*/
+.container {
+  max-width: 1200px;
+
+  /* Centraliza horizontalmente */
+  margin: 0 auto;
+
+  padding: 20px;
+}
+
+/* =========================================================
+   CLASSE .FLEX
+   ========================================================= */
+
+/*
+  Faz os elementos filhos ficarem lado a lado.
+
+  Exemplo:
+
+  <div class="flex">
+
+    <p>Texto 1</p>
+
+    <p>Texto 2</p>
+
+  </div>
+*/
+.flex {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+/* =========================================================
+   CLASSE .FLEX-CENTER
+   ========================================================= */
+
+/*
+  Coloca os elementos em Flexbox e centraliza.
+
+  Exemplo:
+
+  <div class="flex-center">
+    Conteúdo
+  </div>
+*/
+.flex-center {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* =========================================================
+   CLASSE .COLUNA
+   ========================================================= */
+
+/*
+  Faz o Flexbox organizar os elementos um embaixo do outro.
+
+  Exemplo:
+
+  <div class="coluna">
+    <p>1</p>
+    <p>2</p>
+  </div>
+*/
+.coluna {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =========================================================
+   CLASSE .BOTAO
+   ========================================================= */
+
+/*
+  Pode transformar um link em algo visualmente parecido
+  com um botão.
+
+  Exemplo:
+
+  <a href="pagina.html" class="botao">
+    Saiba mais
+  </a>
+*/
+.botao {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  background-color: black;
+
+  color: white;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+}
+
+/*
+  Quando passar o mouse em algo com class="botao".
+*/
+.botao:hover {
+  opacity: 0.8;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   CLASSE .CARD
+   ========================================================= */
+
+/*
+  Cria uma espécie de cartão/bloco.
+
+  Exemplo:
+
+  <div class="card">
+    <h2>CS2</h2>
+    <p>Descrição...</p>
+  </div>
+*/
+.card {
+  background-color: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   CLASSE .BORDA
+   ========================================================= */
+
+/*
+  Adiciona uma borda.
+
+  Exemplo:
+
+  <div class="borda">
+    Conteúdo
+  </div>
+*/
+.borda {
+  border: 1px solid black;
+}
+
+/* =========================================================
+   CLASSE .ARREDONDADO
+   ========================================================= */
+
+/*
+  Arredonda as bordas do elemento.
+
+  Pode ser usada em:
+  imagens, divs, botões etc.
+
+  Exemplo:
+
+  <img class="arredondado" src="foto.jpg">
+*/
+.arredondado {
+  border-radius: 10px;
+}
+
+/* =========================================================
+   CLASSE .SOMBRA
+   ========================================================= */
+
+/*
+  Adiciona sombra ao elemento.
+
+  Exemplo:
+
+  <div class="card sombra">
+    ...
+  </div>
+
+  Perceba que podemos usar DUAS classes ao mesmo tempo.
+*/
+.sombra {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   CLASSE .ESPACO
+   ========================================================= */
+
+/*
+  Cria margem embaixo do elemento.
+
+  Exemplo:
+
+  <h2 class="espaco">
+    Título
+  </h2>
+*/
+.espaco {
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   CLASSE .OCULTO
+   ========================================================= */
+
+/*
+  Esconde completamente o elemento.
+
+  Exemplo:
+
+  <p class="oculto">
+    Isso não aparecerá.
+  </p>
+*/
+.oculto {
+  display: none;
+}
+
+/* =========================================================
+   SPAN
+   ========================================================= */
+
+/*
+  span é muito usado para alterar somente uma pequena
+  parte de um texto.
+
+  Normalmente NÃO precisa colocar CSS diretamente em span.
+
+  Melhor criar uma classe.
+
+  Exemplo:
+
+  <p>
+    Meu jogo favorito é
+    <span class="destaque">CS2</span>.
+  </p>
+*/
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+/*
+  section afeta TODAS as:
+
+  <section>
+    ...
+  </section>
+
+  É usada para separar partes do conteúdo.
+*/
+section {
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   ARTICLE
+   ========================================================= */
+
+/*
+  article afeta todos os:
+
+  <article>
+    ...
+  </article>
+
+  Normalmente usado para conteúdo independente:
+  notícia, post, artigo etc.
+*/
+article {
+  padding: 20px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================================================
+   FOOTER + NAV
+   ========================================================= */
+
+/*
+  Afeta somente listas que estejam dentro do nav
+  que esteja dentro do footer.
+
+  Exemplo:
+
+  <footer>
+    <nav>
+      <ul>
+        ...
+      </ul>
+    </nav>
+  </footer>
+*/
+footer nav ul {
+  display: flex;
+
+  gap: 20px;
+}
+
+/*
+  Afeta somente links dentro do footer.
+*/
+footer a {
+  color: black;
+}
+
+/* =========================================================
+   ÍCONES
+   ========================================================= */
+
+/*
+  i geralmente é usado pelos ícones do Font Awesome.
+
+  Exemplo:
+
+  <i class="fa-brands fa-facebook"></i>
+*/
+i {
+  margin-left: 5px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/*
+  @media funciona quando determinada condição acontece.
+
+  Nesse caso:
+
+  essas configurações SÓ serão usadas quando a tela
+  tiver 768px ou menos.
+
+  Muito usado para celulares.
+*/
+@media (max-width: 768px) {
+  /*
+    Quando estiver no celular,
+    o menu que antes ficava lado a lado ficará em coluna.
+  */
+  nav ul {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  /*
+    Também muda a lista do header para coluna.
+  */
+  header ul {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  /*
+    Reduz o tamanho dos títulos principais no celular.
+  */
+  h1 {
+    font-size: 26px;
+  }
+
+  /*
+    Diminui o padding do main em telas menores.
+  */
+  main {
+    padding: 10px;
+  }
+}
